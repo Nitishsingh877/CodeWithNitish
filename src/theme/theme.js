@@ -38,8 +38,26 @@ const theme = extendTheme({
   styles: {
     global: (props) => ({
       body: {
-        bg: props.colorMode === 'dark' ? 'gray.900' : 'white',
-        color: props.colorMode === 'dark' ? 'white' : 'gray.800',
+        bg: props.colorMode === 'dark' ? '#0f1419' : '#f8f9fa',
+        color: props.colorMode === 'dark' ? '#e8eef5' : '#1a202c',
+      },
+      '*::selection': {
+        bg: props.colorMode === 'dark' ? '#42a5f5' : '#90caf9',
+        color: 'white',
+      },
+      '::-webkit-scrollbar': {
+        width: '8px',
+        height: '8px',
+      },
+      '::-webkit-scrollbar-track': {
+        bg: props.colorMode === 'dark' ? '#1a202c' : '#e2e8f0',
+      },
+      '::-webkit-scrollbar-thumb': {
+        bg: '#42a5f5',
+        borderRadius: '4px',
+        '&:hover': {
+          bg: '#1e88e5',
+        },
       },
     }),
   },
@@ -55,9 +73,19 @@ const theme = extendTheme({
           _hover: {
             bg: 'linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%)',
             transform: 'translateY(-2px)',
+            boxShadow: '0 8px 16px rgba(102, 126, 234, 0.3)',
           },
           _active: {
             transform: 'translateY(0)',
+          },
+        },
+        solidGradient: {
+          bg: 'linear-gradient(135deg, #42a5f5 0%, #ab47bc 100%)',
+          color: 'white',
+          fontWeight: 'bold',
+          _hover: {
+            boxShadow: '0 10px 24px rgba(66, 165, 245, 0.4)',
+            transform: 'translateY(-2px)',
           },
         },
       },
@@ -70,8 +98,47 @@ const theme = extendTheme({
           boxShadow: props.colorMode === 'dark' 
             ? '0 4px 6px -1px rgba(0, 0, 0, 0.3)' 
             : '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+          transition: 'all 0.3s ease',
+          _hover: {
+            boxShadow: props.colorMode === 'dark'
+              ? '0 20px 25px -5px rgba(0, 0, 0, 0.5)'
+              : '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
+          },
         },
       }),
+    },
+    Heading: {
+      baseStyle: {
+        fontWeight: '700',
+        letterSpacing: '-0.01em',
+      },
+    },
+    Text: {
+      baseStyle: {
+        lineHeight: '1.6',
+      },
+    },
+    Input: {
+      baseStyle: (props) => ({
+        field: {
+          borderRadius: 'lg',
+          transition: 'all 0.2s',
+          _focus: {
+            borderColor: 'brand.400',
+            boxShadow: '0 0 0 3px rgba(66, 165, 245, 0.1)',
+          },
+          _placeholder: {
+            color: props.colorMode === 'dark' ? 'gray.500' : 'gray.400',
+          },
+        },
+      }),
+    },
+    Badge: {
+      baseStyle: {
+        borderRadius: 'full',
+        fontWeight: '500',
+        fontSize: 'xs',
+      },
     },
   },
 })

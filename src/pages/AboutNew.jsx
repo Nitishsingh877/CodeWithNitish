@@ -183,8 +183,37 @@ export default function About() {
                       </Text>
                     ))}
                   </Stack>
+
+                  <Box pt={6} borderTop="1px" borderColor={borderColor} />
+                  {/* new internship */}
+                   <Box>
+                    <Text fontWeight="bold" fontSize="lg" color={useColorModeValue('gray.800', 'gray.200')}>
+                      {experience.internship.title}
+                    </Text>
+                    <Text color="brand.400" fontWeight="medium">
+                      {experience.internship.company} • {experience.internship.duration}
+                    </Text>
+                    <Text fontSize="sm" color={useColorModeValue('gray.500', 'gray.400')} mb={4}>
+                      {experience.current.location}
+                    </Text>
+                  </Box>
+
+                  <Text color={useColorModeValue('gray.600', 'gray.300')} lineHeight="tall">
+                    {experience.internship.description}
+                  </Text>
+
+                  <Stack spacing={3}>
+                    <Text fontWeight="bold" color="brand.400">Key Responsibilities:</Text>
+                    {experience.internship.responsibilities.map((responsibility, index) => (
+                      <Text key={index} color={useColorModeValue('gray.600', 'gray.300')} lineHeight="tall">
+                        • {responsibility}
+                      </Text>
+                    ))}
+                  </Stack>
+                  
                 </Stack>
               </CardBody>
+              
             </MotionCard>
           </Stack>
         </Container>

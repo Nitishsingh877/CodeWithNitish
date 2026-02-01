@@ -1,141 +1,168 @@
     # 🚀 NitishBuilds Portfolio
 
-    Professional developer portfolio showcasing full-stack development expertise, AI/GenAI projects, and modern web technologies.
+    Professional developer portfolio showcasing full-stack development expertise, AI/GenAI projects, technical blogs, and modern web technologies.
 
     ## 🌐 Live Demo
     **[nitishbuilds.site](https://nitishbuilds.site)**
 
     ## 👨‍💻 About
     Portfolio of **Nitish Singh** - Java Full Stack Developer & Analyst at Capgemini, specializing in:
-    - Microservices Architecture with Spring Boot
-    - AI/GenAI Applications with Google Gemini
-    - Modern Frontend Development with React
-    - Cloud Technologies (AWS, Azure)
+    - ☕ Microservices Architecture with Spring Boot
+    - 🤖 AI/GenAI Applications with Google Gemini
+    - ⚛️ Modern Frontend Development with React
+    - ☁️ Cloud Technologies (AWS, Azure)
+    - 📚 Technical Content & Blog Articles
+
+    ## ✨ Key Features
+
+    ### 📝 Blog Section (NEW!)
+    **5 comprehensive technical articles:**
+    1. **@Lazy Annotation in Spring Boot** - Optimize app startup & resources
+    2. **Apache ZooKeeper** - Distributed coordination for microservices
+    3. **Poiji** - Java Excel API for Spring Boot file processing
+    4. **ARIS** - Enterprise process modeling & digital transformation
+    5. **Moltbook** - AI agents collaboration for intelligent problem solving
+
+    **Blog Features:**
+    - Advanced search and filtering by category/tags
+    - Reading time estimates
+    - Related articles suggestions
+    - Responsive design with syntax highlighting
+    - Social sharing capabilities
+
+    ### 💼 Projects Gallery
+    - 5 featured projects with case studies
+    - Interactive project details
+    - GitHub & live demo links
+    - Technology stack showcase
+
+    ### 🏠 Portfolio Sections
+    - Hero section with animated intro
+    - About with professional background
+    - Services offered
+    - Skills & tech stack (16+ technologies)
+    - Certifications & achievements
+    - Contact form
 
     ## 🛠️ Tech Stack
 
     ### Frontend
-    - **React 18** with Vite
-    - **Chakra UI** for components
-    - **Framer Motion** for animations
-    - **React Router** for navigation
+    - **React 18** with Vite for fast development
+    - **Chakra UI** for polished components
+    - **Framer Motion** for smooth animations
+    - **React Router v6** for routing
     - **React Icons** for iconography
+    - **React Helmet** for SEO
 
-    ### Backend (Previous Version)
-    - **Java Spring Boot**
-    - **Spring Security with JWT**
-    - **MySQL Database**
-    - **RESTful APIs**
-
-    ### Current Architecture
-    - **Frontend-only** with static data
-    - **Optimized for deployment** on Vercel
-    - **Responsive design** for all devices
+    ### Styling & UX
+    - Chakra UI theming system
+    - CSS-in-JS with Emotion
+    - Custom gradient variants
+    - Dark/Light mode support
 
     ## 🚀 Quick Start
 
     ### Prerequisites
-    - Node.js 18+ 
+    - Node.js 18+
     - npm or yarn
 
     ### Installation
     ```bash
     # Clone repository
-    git clone https://github.com/YOUR_USERNAME/nitishbuilds-portfolio.git
-    cd nitishbuilds-portfolio
-
-    # Navigate to frontend
-    cd frontend
+    git clone https://github.com/Nitishsingh877/CodeWithNitish.git
+    cd CodeWithNitish
 
     # Install dependencies
     npm install
 
     # Start development server
     npm run dev
-    ```
 
-    ### Build for Production
-    ```bash
+    # Build for production
     npm run build
-    npm run preview
     ```
 
     ## 📁 Project Structure
     ```
-    NitishBuilds/
-    ├── frontend/
-    │   ├── src/
-    │   │   ├── components/     # Reusable UI components
-    │   │   ├── pages/          # Page components
-    │   │   ├── data/           # Static portfolio data
-    │   │   └── assets/         # Images and static files
-    │   ├── public/             # Public assets
-    │   └── package.json
-    ├── .gitignore
-    └── README.md
+    src/
+    ├── components/           # Reusable components
+    ├── pages/               # Page components
+    │   ├── Blog.jsx         # NEW: Blog listing
+    │   └── BlogPost.jsx     # NEW: Individual blog
+    ├── data/
+    │   └── portfolioData.js  # All content + blogs
+    ├── theme/
+    │   └── theme.js         # Custom theme
+    └── App.jsx
     ```
 
-    ## 🎯 Features
+    ## 📄 Blog Articles
 
-    ### 🏠 Portfolio Sections
-    - **Hero Section** with animated background
-    - **About** with professional summary
-    - **Projects** with detailed case studies
-    - **Experience** and work history
-    - **Skills** with technology stack
-    - **Education** and certifications
-    - **Contact** with direct communication
+    ### 1. @Lazy Annotation in Spring Boot
+    - **Category:** Spring Boot
+    - **Reading Time:** 8 minutes
+    - **Topics:** Bean lifecycle, performance optimization, best practices
 
-    ### 🖼️ Project Galleries
-    - Interactive image lightbox
-    - Next/Previous navigation
-    - Show more/less functionality
-    - Mobile-responsive design
+    ### 2. Apache ZooKeeper
+    - **Category:** Distributed Systems
+    - **Reading Time:** 10 minutes
+    - **Topics:** Coordination, service discovery, leader election
 
-    ### 📱 Responsive Design
-    - Mobile-first approach
-    - Tablet and desktop optimized
-    - Cross-browser compatibility
+    ### 3. Poiji - Java Excel API
+    - **Category:** Spring Boot
+    - **Reading Time:** 9 minutes
+    - **Topics:** File processing, Excel mapping, Spring integration
 
-    ## 🔧 Key Projects Featured
+    ### 4. ARIS Enterprise Platform
+    - **Category:** Enterprise Architecture
+    - **Reading Time:** 10 minutes
+    - **Topics:** Process modeling, digital transformation, BPMN
 
-    1. **Car Wash System** - Microservices platform with Spring Cloud Gateway
-    2. **MediAssist AI** - Healthcare assistant with Google Gemini API
-    3. **ContentGenie** - AI content generation platform
-    4. **StudyNotion** - EdTech platform with MERN stack
-    5. **RAG Chatbot** - Intelligent chatbot with vector database
+    ### 5. Moltbook AI Agent Collaboration
+    - **Category:** AI/ML
+    - **Reading Time:** 11 minutes
+    - **Topics:** Multi-agent systems, AI orchestration, GenAI
+
+    ## 🎯 Routes
+
+    | Route | Description |
+    |-------|-------------|
+    | / | Home with intro & tech stack |
+    | /projects | Project gallery |
+    | /services | Services offered |
+    | /about | Professional background |
+    | /contact | Contact form |
+    | /blog | Blog articles with filters |
+    | /blog/:slug | Individual blog post |
+
+    ## 🎨 Design Highlights
+
+    - **Modern gradient UI** with blue & purple theme
+    - **Smooth animations** with Framer Motion
+    - **Dark/Light mode** support
+    - **Mobile-responsive** design
+    - **Accessibility** optimized
+    - **SEO** friendly
 
     ## 🚀 Deployment
 
-    ### Vercel (Recommended)
+    ### Vercel
     ```bash
-    # Install Vercel CLI
     npm i -g vercel
-
-    # Deploy
-    cd frontend
-    vercel --prod
+    vercel
     ```
 
-    ### Manual Deployment
-    1. Build the project: `npm run build`
-    2. Upload `dist/` folder to hosting service
-    3. Configure custom domain (optional)
+    ## 📱 Browser Support
+    - Chrome, Firefox, Safari, Edge (latest)
+    - Mobile browsers
 
-    ## 📊 Performance
-    - **Lighthouse Score**: 90+
-    - **First Contentful Paint**: < 2s
-    - **Mobile Friendly**: ✓
-    - **SEO Optimized**: ✓
-
-    ## 🤝 Contact
-    - **Email**: nitishkumarsingh877@gmail.com
-    - **Phone**: +91 9546513459
-    - **LinkedIn**: [nitishsingh191](https://www.linkedin.com/in/nitishsingh191/)
-    - **GitHub**: [Nitishsingh877](https://github.com/Nitishsingh877)
+    ## 📧 Contact
+    - **Email:** nitishkumarsingh877@gmail.com
+    - **LinkedIn:** [@nitishsingh191](https://www.linkedin.com/in/nitishsingh191/)
+    - **GitHub:** [@Nitishsingh877](https://github.com/Nitishsingh877)
 
     ## 📄 License
-    This project is open source and available under the [MIT License](LICENSE).
+    Open source - available for personal use and modification
 
     ---
 
