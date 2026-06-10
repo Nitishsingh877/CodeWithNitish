@@ -1,43 +1,82 @@
-import { ChakraProvider } from '@chakra-ui/react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import theme from './theme/theme'
-import AnimatedBackground from './components/AnimatedBackground'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import Projects from './pages/Projects'
-import ProjectDetail from './pages/ProjectDetail'
-import Services from './pages/Services'
-import About from './pages/AboutNew'
-import Contact from './pages/ContactDirect'
-import Blog from './pages/Blog'
-import BlogPost from './pages/BlogPost'
+import { ChakraProvider, Box } from '@chakra-ui/react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { motion, useScroll, useSpring } from 'framer-motion';
+import theme from './theme';
+
+import Navbar from './components/Layout/Navbar';
+import Footer from './components/Layout/Footer';
+import Hero from './components/Sections/Hero';
+import About from './components/Sections/About';
+import Skills from './components/Sections/Skills';
+import Projects from './components/Sections/Projects';
+import Blog from './components/Sections/Blog';
+import Certifications from './components/Sections/Certifications';
+import Contact from './components/Sections/Contact';
+
+// Original detailed pages
+import ProjectDetail from './pages/ProjectDetail';
+import BlogPost from './pages/BlogPost';
+
+const HomeLayout = () => (
+  <>
+    <Hero />
+    <About />
+    <Skills />
+    <Projects />
+    <Blog />
+    <Certifications />
+    <Contact />
+  </>
+);
 
 function App() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   return (
     <HelmetProvider>
       <ChakraProvider theme={theme}>
         <Router>
-          <div className="App">
-            <AnimatedBackground />
+          <Helmet>
+            <title>Nitish Singh | Java Full Stack Developer & AI Builder</title>
+            <meta name="description" content="Portfolio of Nitish Singh, a Java Full Stack Developer specializing in AI solutions, Spring Boot, and React." />
+          </Helmet>
+
+          {/* Reading Progress Bar */}
+          <motion.div
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              height: '4px',
+              background: '#C8A97E',
+              transformOrigin: '0%',
+              scaleX,
+              zIndex: 1000,
+            }}
+          />
+
+          <Box className="App" bg="brand.bg" color="brand.text" minH="100vh" display="flex" flexDirection="column">
             <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/projects/:id" element={<ProjectDetail />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-            </Routes>
+            <Box as="main" flex="1">
+              <Routes>
+                <Route path="/" element={<HomeLayout />} />
+                <Route path="/projects/:id" element={<ProjectDetail />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+              </Routes>
+            </Box>
             <Footer />
-          </div>
+          </Box>
         </Router>
       </ChakraProvider>
     </HelmetProvider>
-  )
+  );
 }
 
-export default App
+export default App;

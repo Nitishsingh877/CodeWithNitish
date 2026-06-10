@@ -132,22 +132,46 @@ export const internshipProjects = [
 ]
 
 export const techStack = [
-  { name: 'Java', icon: 'FaJava', color: 'orange.400', category: 'Backend' },
+  // Languages
+  { name: 'Java', icon: 'FaJava', color: 'orange.400', category: 'Languages' },
+  { name: 'SQL', icon: 'FaDatabase', color: 'blue.400', category: 'Languages' },
+  { name: 'JavaScript', icon: 'FaJs', color: 'yellow.400', category: 'Languages' },
+  
+  // Backend
   { name: 'Spring Boot', icon: 'SiSpringboot', color: 'green.400', category: 'Backend' },
-  { name: 'React', icon: 'FaReact', color: 'blue.400', category: 'Frontend' },
+  { name: 'Spring Security', icon: 'SiSpringsecurity', color: 'green.500', category: 'Backend' },
+  { name: 'JWT', icon: 'SiJsonwebtokens', color: 'purple.400', category: 'Backend' },
+  { name: 'REST APIs', icon: 'FaServer', color: 'blue.500', category: 'Backend' },
+
+  // Architecture & Messaging
+  { name: 'Microservices', icon: 'FaProjectDiagram', color: 'blue.400', category: 'Architecture' },
+  { name: 'RabbitMQ', icon: 'SiRabbitmq', color: 'orange.500', category: 'Architecture' },
+  { name: 'API Gateway', icon: 'FaNetworkWired', color: 'teal.500', category: 'Architecture' },
+
+  // Frontend
+  { name: 'React.js', icon: 'FaReact', color: 'blue.400', category: 'Frontend' },
   { name: 'Angular', icon: 'FaAngular', color: 'red.500', category: 'Frontend' },
-  { name: 'HTML5', icon: 'FaHtml5', color: 'orange.500', category: 'Frontend' },
-  { name: 'CSS3', icon: 'FaCss3Alt', color: 'blue.500', category: 'Frontend' },
-  { name: 'JavaScript', icon: 'FaJs', color: 'yellow.400', category: 'Frontend' },
-  { name: 'Tailwind CSS', icon: 'SiTailwindcss', color: 'teal.400', category: 'Frontend' },
-  { name: 'Jenkins', icon: 'SiJenkins', color: 'blue.600', category: 'DevOps' },
-  { name: 'Kubernetes', icon: 'SiKubernetes', color: 'blue.500', category: 'DevOps' },
-  { name: 'AWS', icon: 'FaAws', color: 'orange.300', category: 'Cloud' },
-  { name: 'Azure', icon: 'SiMicrosoft', color: 'blue.500', category: 'Cloud' },
-  { name: 'Docker', icon: 'FaDocker', color: 'blue.600', category: 'DevOps' },
-  { name: 'Jira', icon: 'SiJira', color: 'blue.600', category: 'Tools' },
+  { name: 'HTML5 & CSS3', icon: 'FaHtml5', color: 'orange.500', category: 'Frontend' },
+
+  // Database
+  { name: 'MySQL', icon: 'SiMysql', color: 'blue.500', category: 'Database' },
+  { name: 'MongoDB', icon: 'SiMongodb', color: 'green.500', category: 'Database' },
+
+  // Cloud & DevOps
+  { name: 'AWS', icon: 'FaAws', color: 'orange.300', category: 'Cloud & DevOps' },
+  { name: 'Google Cloud Run', icon: 'SiGooglecloud', color: 'blue.400', category: 'Cloud & DevOps' },
+  { name: 'Docker', icon: 'FaDocker', color: 'blue.600', category: 'Cloud & DevOps' },
+  { name: 'Jenkins', icon: 'SiJenkins', color: 'blue.600', category: 'Cloud & DevOps' },
+  { name: 'Git & GitHub', icon: 'FaGithub', color: 'gray.600', category: 'Cloud & DevOps' },
+
+  // AI
+  { name: 'GenAI & RAG', icon: 'FaRobot', color: 'purple.500', category: 'AI' },
+  { name: 'Prompt Engineering', icon: 'FaBrain', color: 'pink.400', category: 'AI' },
+
+  // Monitoring & Tools
   { name: 'ELK Stack', icon: 'SiElastic', color: 'yellow.500', category: 'Monitoring' },
-  { name: 'GenAI', icon: 'FaRobot', color: 'purple.500', category: 'AI' }
+  { name: 'SonarQube', icon: 'SiSonarqube', color: 'blue.400', category: 'Tools' },
+  { name: 'Postman', icon: 'SiPostman', color: 'orange.500', category: 'Tools' }
 ]
 
 export const projects = [
